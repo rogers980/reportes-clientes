@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Grupo García, 13 de octubre de 2026: lo que se hizo en Bernardo, MÉTODO y Vertical, lo que falta y para qué sirve cada cosa.">
+<title>Grupo García · 13 de octubre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f6f7f5; --panel:#ffffff; --ink:#1d2421; --mute:#5d6762; --line:#dfe3df;
+  --accent:#1f6f5c; --accent-soft:#e3efe9; --dir:#8a5a12; --dir-soft:#f6ecd9;
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131816; --panel:#1a201d; --ink:#e6ebe8; --mute:#9aa49f; --line:#2c3531;
+  --accent:#6cc3a8; --accent-soft:#1d3a31; --dir:#e0b064; --dir-soft:#3a2e1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131816; --panel:#1a201d; --ink:#e6ebe8; --mute:#9aa49f; --line:#2c3531;
+  --accent:#6cc3a8; --accent-soft:#1d3a31; --dir:#e0b064; --dir-soft:#3a2e1a; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);padding-inline:16px;padding-block:28px 64px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+h1,h2{font-family:var(--f-display);font-weight:600;text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,5vw,38px)}
+h2{font-size:23px}
+.sub{color:var(--mute);margin:8px 0 0;max-width:62ch}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.cifra{background:var(--panel);padding:14px 16px}
+.cifra b{display:block;font:600 28px/1.1 var(--f-display);font-variant-numeric:tabular-nums}
+.cifra span{color:var(--mute);font-size:13px}
+.etq{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 8px;font-weight:600}
+ol.lista{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--line)}
+ol.lista li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.que{font-weight:600}
+.det{grid-column:1/-1;color:var(--mute);font-size:14px;max-width:70ch}
+.para{grid-column:1/-1;font-size:14px;max-width:70ch}
+.para b{font-weight:600;color:var(--accent)}
+.est{align-self:start;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.est.ok{background:var(--accent-soft);color:var(--accent)}
+.est.pend{background:var(--dir-soft);color:var(--dir)}
+.pr{font:500 12px var(--f-mono);color:var(--mute)}
+.pr a{color:inherit}
+h3{font-size:15px;margin:22px 0 0}
+footer{color:var(--mute);font-size:13px;border-top:1px solid var(--line);padding-top:14px;max-width:70ch}
+footer a{color:var(--accent)}
+@media (max-width:520px){ol.lista li{grid-template-columns:1fr}.est{justify-self:start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Grupo García · 13 de octubre de 2026</h1>
+    <p class="sub">Roger Soto · lo que se hizo hoy en Bernardo, MÉTODO y Vertical, lo que falta para dejarlo al 100 % y para qué sirve cada cosa.</p>
+  </header>
+
+  <section class="cifras" aria-label="Resumen">
+    <div class="cifra"><b>5</b><span>PR integrados hoy</span></div>
+    <div class="cifra"><b>102</b><span>páginas de MÉTODO con descripción completa (antes 44 cortas)</span></div>
+    <div class="cifra"><b>22 de 22</b><span>páginas de Bernardo iguales para Google y para el visitante</span></div>
+    <div class="cifra"><b>2</b><span>marcas con recordatorio de cita automático</span></div>
+  </section>
+
+  <section aria-labelledby="hecho">
+    <h2 id="hecho">Lo que se hizo</h2>
+    <ol class="lista">
+      <li>
+        <span class="que">Recordatorios de cita funcionando en Bernardo y MÉTODO</span><span class="est ok">en producción</span>
+        <span class="det">Una tarea automática revisa las citas cada hora y manda el recordatorio desde el número y el correo de cada marca. Antes ninguna cita tenía recordatorio. Probado con citas de prueba en las dos marcas: el correo llega.</span>
+        <span class="pr"><a href="https://github.com/Catalizadora-Labs/grupo-garcia/pull/59">#59</a> · <a href="https://github.com/Catalizadora-Labs/grupo-garcia/pull/60">#60</a></span>
+      </li>
+      <li>
+        <span class="que">MÉTODO: descripción completa en todas las páginas</span><span class="est ok">en producción</span>
+        <span class="det">Las 50 obras y las 8 categorías tienen ahora la descripción que sale debajo del título en Google, entre 110 y 165 caracteres, solo con datos que el sitio ya publica. Medido en vivo: 0 de 102 páginas cortas.</span>
+        <span class="pr"><a href="https://github.com/Catalizadora-Labs/grupo-garcia/pull/61">#61</a></span>
+      </li>
+      <li>
+        <span class="que">MÉTODO y Bernardo: auditoría de buscadores corregida</span><span class="est ok">en producción</span>
+        <span class="det">Se quitaron preguntas frecuentes que Google veía y el visitante no; la imagen al compartir en redes ya no da error; fechas reales en el sitemap; los artículos en inglés quedan marcados en inglés; el ensayo de Bernardo conserva su título. Verificado en vivo, página por página.</span>
+        <span class="pr"><a href="https://github.com/Catalizadora-Labs/grupo-garcia/pull/62">#62</a></span>
+      </li>
+      <li>
+        <span class="que">Google y Bing al día</span><span class="est ok">hecho</span>
+        <span class="det">Vertical verificado en Google y en Bing, con su sitemap enviado. Sitemaps de Bernardo reenviados. Quitados de Bing los sitemaps viejos de www.mtdo.co (2.400 direcciones que ya no existen). Corregido un artículo que salía con el título repetido.</span>
+      </li>
+      <li>
+        <span class="que">Bot de WhatsApp: la negrita se ve bien</span><span class="est ok">en producción</span>
+        <span class="det">29 de 83 respuestas del bot mostraban los asteriscos («**MÉTODO**»). Ahora sale en negrita, para las tres marcas. También se corrigió la hora del recordatorio («p.m..») y la superficie de una obra. Probado en vivo en el WhatsApp de MÉTODO.</span>
+        <span class="pr"><a href="https://github.com/Catalizadora-Labs/grupo-garcia/pull/63">#63</a></span>
+      </li>
+      <li>
+        <span class="que">Plantillas de WhatsApp de los recordatorios</span><span class="est pend">en revisión de Meta</span>
+        <span class="det">Creadas y enviadas a aprobación para Bernardo y MÉTODO. Ticket abierto con Twilio porque las plantillas de la cuenta siguen trabadas en revisión.</span>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="falta">
+    <h2 id="falta">Lo que falta</h2>
+
+    <h3>De nuestro lado</h3>
+    <ol class="lista">
+      <li>
+        <span class="que">Pedir a Google que vuelva a leer 9 páginas</span><span class="est pend">14 de octubre</span>
+        <span class="det">8 de MÉTODO y la de privacidad de Bernardo. Hoy se agotó el cupo diario de Search Console.</span>
+        <span class="para"><b>Para qué:</b> que Google muestre ya la versión corregida, sin esperar semanas a que pase solo.</span>
+      </li>
+      <li>
+        <span class="que">Conectar las plantillas de WhatsApp cuando Meta las apruebe</span><span class="est pend">esperando a Twilio</span>
+        <span class="det">Hoy el recordatorio llega por correo siempre; por WhatsApp solo si el cliente escribió en las últimas 24 horas.</span>
+        <span class="para"><b>Para qué:</b> que el recordatorio llegue también por WhatsApp a todos los clientes, no solo a los que escribieron hace poco.</span>
+      </li>
+    </ol>
+
+    <h3>Del cliente</h3>
+    <ol class="lista">
+      <li>
+        <span class="que">Vertical: el calendario de quien atiende las citas</span><span class="est pend">pendiente</span>
+        <span class="det">Vertical no tiene calendario conectado.</span>
+        <span class="para"><b>Para qué:</b> que el bot no ofrezca horarios que ya están ocupados.</span>
+      </li>
+      <li>
+        <span class="que">MÉTODO: datos de sus proyectos</span><span class="est pend">pendiente</span>
+        <span class="det">18 de 50 proyectos sin ubicación, año o superficie; 20 categorías por confirmar; 35 proyectos sin descripción.</span>
+        <span class="para"><b>Para qué:</b> que cada obra tenga su página completa. Hoy 51 páginas de obra tienen menos de 150 palabras: casi no hay texto que Google pueda mostrar.</span>
+      </li>
+      <li>
+        <span class="que">MÉTODO: publicaciones y premios</span><span class="est pend">pendiente</span>
+        <span class="det">No hay ninguno registrado.</span>
+        <span class="para"><b>Para qué:</b> enlaces de revistas y premios que respaldan al estudio ante Google.</span>
+      </li>
+      <li>
+        <span class="que">Bernardo: cómo presentarlo y el texto de su sitio</span><span class="est pend">pendiente</span>
+        <span class="det">Con qué descripción se le presenta (arquitecto, fundador de MÉTODO, desarrollador…), una semblanza para «Acerca» y confirmar su Instagram. 18 de sus 22 páginas tienen poco texto.</span>
+        <span class="para"><b>Para qué:</b> que Google y las inteligencias artificiales lo presenten como él quiere.</span>
+      </li>
+      <li>
+        <span class="que">Bernardo: el nombre de su WhatsApp</span><span class="est pend">pendiente</span>
+        <span class="det">Su número aparece como «Método».</span>
+        <span class="para"><b>Para qué:</b> que quien le escribe desde su sitio personal vea su nombre.</span>
+      </li>
+    </ol>
+  </section>
+
+  <footer>Todo lo marcado «en producción» se comprobó hoy en los sitios y bots en vivo. Los PR enlazan a GitHub. El trabajo anterior está en el <a href="grupo-garcia.html">reporte del 28 de agosto al 30 de septiembre</a>.</footer>
+</div>
+</body>
+</html>
