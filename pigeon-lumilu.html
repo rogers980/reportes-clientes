@@ -85,6 +85,14 @@
   .busqueda .dato b { display:block; font-size:44px; font-weight:800; line-height:1; color:var(--fuerte); margin:10px 0 8px; }
   .busqueda .dato p { margin:0; font-size:14.5px; }
   @media (max-width:900px) { .busqueda { grid-template-columns:1fr; } }
+  .compromiso { margin-top:64px; background:var(--hoja); border-radius:var(--radio); padding:32px; border-left:6px solid var(--marca); break-inside:avoid; }
+  .compromiso h2 { margin:0 0 14px; }
+  .compromiso p { margin:0 0 12px; max-width:70ch; }
+  .compromiso ul { margin:4px 0 16px; padding-left:20px; max-width:70ch; }
+  .compromiso li { margin-bottom:6px; }
+  .compromiso .firma { margin:22px 0 0; color:var(--fuerte); font-weight:700; }
+  .compromiso .firma span { display:block; font-weight:400; font-size:14px; color:var(--suave); }
+  @media (max-width:640px) { .compromiso { padding:22px; } }
   .resumen { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:16px; }
   .resumen .area { margin-top:0; }
   .resumen h3 { margin:0 0 12px; font-size:17px; color:var(--fuerte); }
@@ -127,7 +135,7 @@
   </ol>
   <p class="etapas-nota">Seis etapas entregadas y funcionando en producción. La séptima es la de cierre.</p>
   <ul class="indice">
-    <li><a href="#resumen">Resumen</a></li><li><a href="#falta">Etapa final</a></li><li><a href="#cifras">En números</a></li><li><a href="#ventas">Tráfico y ventas</a></li><li><a href="#buscadores">Google, Bing e IA</a></li><li><a href="#areas">Área por área</a></li><li><a href="#registro">Cada mejora publicada</a></li>
+    <li><a href="#resumen">Resumen</a></li><li><a href="#falta">Etapa final</a></li><li><a href="#compromiso">Compromiso</a></li><li><a href="#cifras">En números</a></li><li><a href="#ventas">Tráfico y ventas</a></li><li><a href="#buscadores">Google, Bing e IA</a></li><li><a href="#areas">Área por área</a></li><li><a href="#registro">Cada mejora publicada</a></li>
   </ul>
 
     
@@ -143,6 +151,22 @@
   <h2 id="falta">Etapa final: lo que queda para cerrar</h2>
   <p class="nota">Cada pendiente con quién lo tiene y el siguiente paso. Los que dependen de su equipo los cargamos o conectamos el mismo día en que nos llegan.</p>
   <table class="tabla-falta"><thead><tr><th>Pendiente</th><th>Depende de</th><th>Siguiente paso</th></tr></thead><tbody><tr class="grupo"><td colspan="3">Meta (Instagram y Facebook)</td></tr><tr><td>Conectar Instagram a Mila.</td><td class="quien">Nosotros</td><td class="paso">Habilitar la cuenta en la consola de Meta y conectarla.</td></tr><tr><td>Píxel de Meta para medir campañas.</td><td class="quien">Nosotros</td><td class="paso">Instalarlo en las dos tiendas desde el administrador de Meta.</td></tr><tr><td>Enlaces a Instagram y Facebook en el pie de las dos tiendas.</td><td class="quien">Nosotros</td><td class="paso">Agregarlos con las cuentas conectadas.</td></tr><tr><td>Mila y Luli atienden también los mensajes de Instagram y Facebook, con el mismo Atlas.</td><td class="quien">Nosotros</td><td class="paso">Al quedar conectadas las cuentas.</td></tr><tr><td>Públicos para campañas que se arman solos: cada clienta que compra o escribe se guarda automáticamente en Meta, para anunciarle de nuevo y para encontrar personas parecidas.</td><td class="quien">Nosotros</td><td class="paso">Conectarlo desde el Atlas junto con el píxel.</td></tr><tr class="grupo"><td colspan="3">Fotos</td></tr><tr><td>Imágenes de todas las páginas de las dos tiendas renovadas con el banco de fotos oficial de la marca, sobre fondo blanco.</td><td class="quien">Nosotros</td><td class="paso">Armar la propuesta página por página para su aprobación.</td></tr><tr><td>Aprobación de las imágenes nuevas.</td><td class="quien">Su equipo</td><td class="paso">Revisar la propuesta; la publicamos el mismo día.</td></tr><tr><td>Fotos de producto para 14 artículos del catálogo: con ellas cada producto puede salir en Google Imágenes y Google Shopping.</td><td class="quien">Su equipo</td><td class="paso">Enviar las fotos; las cargamos al recibirlas.</td></tr><tr class="grupo"><td colspan="3">Inventario y catálogo</td></tr><tr><td>Costos de compra para el inventario y el margen por producto.</td><td class="quien">Su equipo</td><td class="paso">Enviar los costos; los cargamos al recibirlos.</td></tr><tr><td>Productos con precio de catálogo distinto de su presentación a la venta (por ejemplo, las toallitas Baby Wipes de 70 u.).</td><td class="quien">Su equipo</td><td class="paso">Confirmar el precio o la presentación correcta.</td></tr><tr class="grupo"><td colspan="3">Atlas y pedidos</td></tr><tr><td>Cambiar los productos de un pedido sin pagar desde el Atlas.</td><td class="quien">Nosotros</td><td class="paso">En desarrollo.</td></tr><tr><td>Envíos: generar la guía y seguir el paquete desde el Atlas.</td><td class="quien">Empresa de envíos</td><td class="paso">Que entregue su API.</td></tr><tr><td>Pruebas en el Atlas: compra con 3 pagos, anular un pedido y la primera nota de crédito real.</td><td class="quien">Su equipo</td><td class="paso">Hacerlas con un caso real; las acompañamos.</td></tr><tr class="grupo"><td colspan="3">Afinar</td></tr><tr><td>Lumilu en Google Shopping (catálogo de 56 productos listo).</td><td class="quien">Nosotros</td><td class="paso">Abrir la cuenta de Merchant Center.</td></tr><tr><td>Revisar con las primeras facturas reales: la tienda en las de mayoreo, la nota de débito y la factura cambiaria.</td><td class="quien">Nosotros</td><td class="paso">Al emitirse cada una.</td></tr><tr><td>Medir cuántas edades del bebé guarda Mila en las conversaciones reales.</td><td class="quien">Nosotros</td><td class="paso">Con los datos de las próximas semanas.</td></tr><tr><td>Ajustes que vayan saliendo del uso diario.</td><td class="quien">Nosotros</td><td class="paso">Continuo.</td></tr><tr class="grupo"><td colspan="3">En pausa</td></tr><tr><td>Pagos y retenciones de ISR o IVA por pedido.</td><td class="quien">En espera</td><td class="paso">Desde la reunión del 16 de octubre, para revisarlo con su equipo.</td></tr></tbody></table>
+
+  <section class="compromiso" id="compromiso">
+    <h2>Nuestro compromiso</h2>
+    <p>Vamos a terminar la etapa final completa:</p>
+    <ul class="check" style="display:block">
+      <li class="si">La conexión con Meta: Instagram, Facebook, el píxel y los públicos para campañas que se arman solos.</li>
+      <li class="si">La renovación de las imágenes de las dos tiendas con el banco de fotos de la marca.</li>
+      <li class="si">Los cambios de pedidos desde el Atlas y Google Shopping de Lumilu.</li>
+      <li class="si">Los ajustes finos que vayan saliendo del uso diario.</li>
+    </ul>
+    <p>Lo que dependa de su equipo (fotos de producto, costos de inventario y aprobación de imágenes) lo cargamos y publicamos el mismo día en que nos llegue.</p>
+    <p>Además de cerrar lo pendiente, seguimos al tanto de todo lo que ya está funcionando: tiendas, facturación, Atlas, Mila y Luli. Revisamos cada día que todo funcione bien y respondemos a lo que nos reporten sin esperar a la próxima reunión.</p>
+    <p>Cada avance queda registrado en este mismo informe, que iremos actualizando en el mismo enlace, para que siempre vean dónde estamos.</p>
+    <p>Cuentan con nosotros hasta dejarlo terminado y funcionando como lo esperan.</p>
+    <p class="firma">Roger Soto<span>20 de octubre de 2026</span></p>
+  </section>
 
   <h2 id="cifras">En números</h2>
   <p class="nota">Al 20 de octubre.</p>
@@ -244,6 +268,7 @@
   </div>
 
   
+
 </main>
 </body>
 </html>
